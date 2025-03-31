@@ -11,8 +11,6 @@ shared_scripts { 'config.lua' }
 
 client_script { 'client/client.lua' }
 
-server_scripts { 'server/server.lua' }
-
 ui_page 'nui/nui.html'
 
 files {
