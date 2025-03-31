@@ -13,6 +13,15 @@ client_script { 'client/client.lua' }
 
 server_scripts { 'server/server.lua' }
 
+ui_page 'nui/nui.html'
+
+files {
+    'nui/nui.html',
+    'nui/style.css',
+    'nui/script.js',
+    'nui/images/*'
+}
+
 version '1.0'
 vorp_checker 'yes'
 vorp_name '^5PyThor_Timer ^4version Check^3'
