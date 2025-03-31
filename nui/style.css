@@ -1,0 +1,12 @@
+.timer-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: 'Rye', 'Courier New', monospace;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
