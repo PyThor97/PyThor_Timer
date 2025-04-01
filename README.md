@@ -33,4 +33,3 @@ Coming soon...
 
 ---
 
-Enjoy the countdown! ⏳
