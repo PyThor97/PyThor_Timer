@@ -1,3 +1,5 @@
+let countdownInterval = null;
+
 function showTimer() {
     const timer = document.getElementById("timer");
     if (timer) {
@@ -15,7 +17,15 @@ function hideTimer() {
         timer.style.opacity = "0";
         setTimeout(() => {
             timer.style.display = "none";
+            stopCountdown(); // ⛔ עצירה מלאה
         }, 500);
+    }
+}
+
+function stopCountdown() {
+    if (countdownInterval) {
+        clearInterval(countdownInterval);
+        countdownInterval = null;
     }
 }
 
@@ -35,10 +45,12 @@ function timerCountdown(seconds) {
     const timerDiv = document.getElementById("timer");
     if (!timerDiv) return;
 
+    stopCountdown();
+
     timerDiv.classList.remove("flash");
     timerDiv.textContent = formatTime(seconds);
 
-    const interval = setInterval(() => {
+    countdownInterval = setInterval(() => {
         seconds--;
 
         if (seconds <= 10) {
@@ -46,7 +58,8 @@ function timerCountdown(seconds) {
         }
 
         if (seconds <= 0) {
-            clearInterval(interval);
+            clearInterval(countdownInterval);
+            countdownInterval = null;
             timerDiv.textContent = "00:00";
             timerDiv.classList.remove("flash");
             hideTimer();

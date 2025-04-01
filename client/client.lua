@@ -76,7 +76,7 @@ RegisterCommand(Config.Command, function(source, args)
             timerOn = false
         end)
     else
-        VorpCore.NotifyRightTip("You already have a timer running!", 4000)
+        VorpCore.NotifyRightTip("A timer is already running. Use /stoptimer first!", 4000)
     end
 end, false)
 
