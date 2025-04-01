@@ -1,4 +1,3 @@
-![Pythor_logo](https://github.com/user-attachments/assets/1a147f51-b3ae-435f-a06a-8e6b7883e3de)
 # RedM Timer Script ⏱️
 
 This is a lightweight and clean NUI-based countdown timer for RedM using VORP Core.
@@ -33,8 +32,7 @@ This is a lightweight and clean NUI-based countdown timer for RedM using VORP Co
 - Discord logs(?)
 
 ## 📸 Preview
-
-https://www.youtube.com/watch?v=_DO7N54KxHA
+(video)[https://www.youtube.com/watch?v=_DO7N54KxHA]
 
 ---
 
