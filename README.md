@@ -29,7 +29,7 @@ This is a lightweight and clean NUI-based countdown timer for RedM using VORP Co
 
 ## 📸 Preview
 
-Coming soon...
+https://www.youtube.com/watch?v=_DO7N54KxHA
 
 ---
 
