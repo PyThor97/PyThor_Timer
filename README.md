@@ -25,7 +25,7 @@ This is a lightweight and clean NUI-based countdown timer for RedM using VORP Co
 
 - Add sound notification at the end
 - Add multi-timer support
-- Add UI theme switcher
+- Discord logs(?)
 
 ## 📸 Preview
 
