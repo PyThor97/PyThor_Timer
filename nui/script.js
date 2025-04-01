@@ -17,7 +17,7 @@ function hideTimer() {
         timer.style.opacity = "0";
         setTimeout(() => {
             timer.style.display = "none";
-            stopCountdown(); // ⛔ עצירה מלאה
+            stopCountdown();
         }, 500);
     }
 }
