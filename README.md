@@ -12,6 +12,10 @@ This is a lightweight and clean NUI-based countdown timer for RedM using VORP Co
 - Fully client-side, efficient and isolated per player
 - Chat suggestions for both commands
 
+## Installation
+- Download the resource in your resources folder
+- Add `ensure PyThor_Timer` to you server.cfg
+
 ## 🚀 Commands
 
 - `/timer 5 min` → Starts a 5-minute countdown
@@ -20,6 +24,8 @@ This is a lightweight and clean NUI-based countdown timer for RedM using VORP Co
 ## 🛠️ Requirements
 
 - VORP Core
+
+# Please don't change the resource name to give credit
 
 ## ✅ To-do (optional)
 
