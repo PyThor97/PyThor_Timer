@@ -25,8 +25,6 @@ This is a lightweight and clean NUI-based countdown timer for RedM using VORP Co
 
 - VORP Core
 
-# Please don't change the resource name to give credit
-
 ## ✅ To-do (optional)
 
 - Add sound notification at the end
@@ -39,3 +37,4 @@ https://www.youtube.com/watch?v=_DO7N54KxHA
 
 ---
 
+# Please don't change the resource name to give credit
