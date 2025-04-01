@@ -1,4 +1,7 @@
 .timer-container {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
     position: absolute;
     top: 20px;
     left: 50%;
@@ -9,4 +12,26 @@
     font-size: 24px;
     font-family: 'Rye', 'Courier New', monospace;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.flash {
+    animation: flash-color 1s infinite;
+}
+
+@keyframes flash-color {
+    0% {
+        background-color: #f0f0f0;
+        color: black;
+    }
+
+    50% {
+        background-color: #ff4d4d;
+        color: white;
+    }
+
+    100% {
+        background-color: #f0f0f0;
+        color: black;
+    }
 }
