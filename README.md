@@ -32,7 +32,7 @@ This is a lightweight and clean NUI-based countdown timer for RedM using VORP Co
 - Discord logs(?)
 
 ## 📸 Preview
-(video)[https://www.youtube.com/watch?v=_DO7N54KxHA]
+!(video)[https://www.youtube.com/watch?v=_DO7N54KxHA]
 
 ---
 
