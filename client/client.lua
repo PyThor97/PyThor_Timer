@@ -92,3 +92,79 @@ RegisterCommand(Config.CommandStopTimer, function()
         VorpCore.NotifyRightTip("No timer is currently running.", 4000)
     end
 end, false)
+
+-- Export functions for use in other resources
+-- Does not modify existing code, only adds new functionality
+
+-- Starts a timer with the specified amount and unit
+-- Returns true if the timer was started successfully, false otherwise
+exports('startTimer', function(amount, unit)
+    -- Parameter validation
+    if not amount or not unit then
+        Dev("Export startTimer: invalid parameters")
+        return false
+    end
+
+    -- Convert to the format expected by the original script
+    local isValid = false
+    local totalSeconds = 0
+    unit = string.lower(unit)
+
+    if unit == Config.TimeUnits.Seconds then
+        totalSeconds = amount
+        Dev("Export startTimer: seconds: " .. totalSeconds)
+        isValid = true
+    elseif unit == Config.TimeUnits.Minutes then
+        totalSeconds = amount * 60
+        Dev("Export startTimer: seconds: " .. totalSeconds)
+        isValid = true
+    elseif unit == Config.TimeUnits.Hours then
+        totalSeconds = amount * 3600
+        Dev("Export startTimer: seconds: " .. totalSeconds)
+        isValid = true
+    else
+        Dev("Export startTimer: invalid time unit")
+        return false
+    end
+
+    -- Uses the same logic as the original command
+    if isValid and not timerOn then
+        timerOn = true
+
+        SendNUIMessage({
+            type = 'time',
+            seconds = totalSeconds
+        })
+
+        CreateThread(function()
+            Wait(totalSeconds * 1000)
+            timerOn = false
+        end)
+        
+        return true
+    else
+        Dev("Export startTimer: a timer is already running")
+        return false
+    end
+end)
+
+-- Stops the current timer
+-- Returns true if a timer was stopped, false if no timer was running
+exports('stopTimer', function()
+    if timerOn then
+        timerOn = false
+        SendNUIMessage({ action = "hide" })
+        SetNuiFocus(false, false)
+        Dev("Export stopTimer: timer stopped")
+        return true
+    else
+        Dev("Export stopTimer: no timer currently running")
+        return false
+    end
+end)
+
+-- Checks if a timer is currently running
+-- Returns true if a timer is running, false otherwise
+exports('isTimerRunning', function()
+    return timerOn
+end)
